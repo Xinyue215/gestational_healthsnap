@@ -27,7 +27,7 @@ keras2onnx==1.7.0
 matplotlib==3.7.3
 matplotlib-inline==0.1.6
 numpy
-openai==1.14.2
+openai
 packaging==23.2
 pandas==2.0.3
 Pillow==10.1.0
