@@ -11,6 +11,8 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.title("Gestational HealthSnap")
 
+st.markdown("[GitHub Repository](https://github.com/Xinyue215/gestational_healthsnap)")
+
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
 
 if uploaded_file is not None:
