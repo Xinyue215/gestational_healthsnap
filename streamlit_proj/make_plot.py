@@ -1,6 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import sys
+import pickle
+
+with open('food_dict.pkl', 'rb') as pickle_file:
+    food_dict = pickle.load(pickle_file)
 
 df = pd.read_csv('../final_df.csv', index_col='Classes')
 df.drop(columns=['Unnamed: 0'], inplace=True)
@@ -56,7 +60,7 @@ def makeplot(food):
 
     axes[-1].set_visible(False)
     axes[-2].set_visible(False)
-    plt.suptitle(f'Nutrient Content of {food}', fontsize=24, y=1.05)
+    plt.suptitle(f'Nutrient Content of {food_dict[food]}', fontsize=24, y=1.05)
     plt.tight_layout()
     
     return final_plot
